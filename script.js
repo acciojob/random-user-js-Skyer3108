@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(response => response.json())
       .then(data => {
         const user = data.results[0];
+		  additionalInfo.innerText=''
         userPhoto.src = user.picture.large;
         userName.textContent = user.name.first + ' ' + user.name.last;
       })
